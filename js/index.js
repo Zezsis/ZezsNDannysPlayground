@@ -48,9 +48,7 @@ var beacons = {
     "9C:8C:6E:4F:28:1F": 3
 };
 
-
 function refreshDeviceList() {
-    deviceList = [];
     //document.getElementById("bleDeviceList").innerHTML = ''; // empties the list
     if (cordova.platformId === 'android') { // Android filtering is broken
         //Beacon1 D4:F7:2C:CD:54:BD
