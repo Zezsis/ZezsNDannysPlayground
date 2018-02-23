@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<link rel = "stylesheet" type = "text/css" href = "format.css">   <!-- Link to style sheet named format.css -->
+		<script type="text/javascript" src="cordova.js"></script> 
+        <script type="text/javascript" src="js/index.js"></script>
+        <title>Beacon</title>
+    </head>
+    <body onload="onLoad()">
+<!--
+		<h1>Blufruit test</h1>
+           
+		<ul id="bleDeviceList"> </ul>  
+		<button id="refreshButton" onClick = "refreshDeviceList()">Refresh</button>
+		<br>
+		<div id="statusDiv">Status: Disconnected</div>
+		<div id="bleId">DeviceId:</div>
+		<div id="debugDiv"></div> -->
+		<p> hello </p>
+		<div class="Beacon" id="Beacon1"></div>
+		<div class="Beacon" id="Beacon2"></div>
+		<div class="Beacon" id="Beacon3"></div>
+		<div class="Room" id="r101" style="display: none"></div>
+		<div class="Room" id="r102" style="display: none"></div>
+		<div class="Room" id="ServerRoom" style="display: none"></div>
+		<div class="Room" id="Printers" style="display: none"></div>
+		<div class="Room" id="r103" style="display: none"></div>
+		<div class="Room" id="r104" style="display: none"></div>
+		<div class="Room" id="WC" style="display: none"></div>
+		<button id="buttonA" onClick = "toggleDiv('Beacon1')">A</button>
+		<button id="buttonB" onClick = "toggleDiv('Beacon2')">B</button>
+		<button id="buttonC" onClick = "toggleDiv('Beacon3')">C</button>
+		<button id="button101" onClick = "toggleDiv('r101')">101</button>
+		<button id="button102" onClick = "toggleDiv('r102')">102</button>
+		<button id="buttonServerRoom" onClick = "toggleDiv('ServerRoom')">ServerRoom</button>
+		<button id="buttonPrinters" onClick = "toggleDiv('Printers')">Printers</button>
+		<button id="button103" onClick = "toggleDiv('r103')">103</button>
+		<button id="button104" onClick = "toggleDiv('r104')">104</button>
+		<button id="buttonWC" onClick = "toggleDiv('WC')">WC</button>
+    </body>
+</html>
