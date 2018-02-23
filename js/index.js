@@ -57,20 +57,16 @@ function refreshDeviceList() {
         //alert("Disconnected");
         ble.scan([blue.serviceUUID], 5, onDiscoverDevice, onError);
     }
-    console.log(deviceList);
 
-    hideBeacons();
-    for (var i = 0; i < deviceList.length; i++) {
-        var deviceId = deviceList[i];
-        var beacon = beacons[deviceId];
-        if (beacon) ShowBeacon(beacon);
-    }
 }
 
 
 function onDiscoverDevice(device) {
-    console.log(device);
-    deviceList[deviceList.length] = device.id;
+    var beacon = beacons[device.id];
+    if (beacon) {
+        hideBeacons();
+        ShowBeacon(beacon);
+    }
 }
 
 
