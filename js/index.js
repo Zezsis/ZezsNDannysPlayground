@@ -64,7 +64,7 @@ function refreshDeviceList() {
 function onDiscoverDevice(device) {
     var beacon = beacons[device.id];
     if (beacon) {
-        hideBeacons();
+        hideBeacons(beacon);
         ShowBeacon(beacon);
     }
 }
@@ -113,9 +113,10 @@ function toggleDiv(room) {
     console.log("dsasd");
 }
 
-function hideBeacons(params) {
+function hideBeacons(beacon) {
     var beacons = document.getElementsByClassName("Beacon");
     for (var i = 0; i < beacons.length; i++) {
+        if (beacon != beacons[i].id)
         beacons[i].style.display = "none";
     }
 }
