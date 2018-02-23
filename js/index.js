@@ -35,7 +35,7 @@ var deviceList =[];
 function onLoad(){
     hideBeacons();
 	document.addEventListener('deviceready', onDeviceReady, false);
-    bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling
+    //bleDeviceList.addEventListener('touchstart', conn, false); // assume not scrolling
 }
 
 function onDeviceReady(){
@@ -51,7 +51,7 @@ var beacons = {
 	 
 function refreshDeviceList(){
 	deviceList =[];
-	document.getElementById("bleDeviceList").innerHTML = ''; // empties the list
+	//document.getElementById("bleDeviceList").innerHTML = ''; // empties the list
 	if (cordova.platformId === 'android') { // Android filtering is broken
 	//Beacon1 D4:F7:2C:CD:54:BD
 		ble.scan([], 5, onDiscoverDevice, onError);
@@ -113,6 +113,8 @@ function toggleDiv(room) {
     } else {
         x.style.display = "none";
     }
+
+    console.log("dsasd");
 }
 
 function hideBeacons(params) {
